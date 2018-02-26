@@ -1,9 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
 const app = express();
 
