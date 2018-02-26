@@ -1,0 +1,25 @@
+{
+  "name": "again-website",
+  "version": "1.0.0",
+  "description": "Website for AGAIN by LAKRAN",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node.js"
+  },
+  "author": "Wendy Dimmendaal",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "nodemailer": "^4.6.0"
+  }
+}

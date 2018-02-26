@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGAIN by LAKRAN</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/unslider.min.css">
+    <link rel="stylesheet" href="public/css/unslider-dots.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<nav id="nav-bar" class="sticky">
+    <div class="left-menu">
+        <img src="./public/images/again-cloud-commerce-company-dark.png" alt="AGAIN Cloud Commerce Company Logo">
+    </div>
+    <div class="right-menu">
+        <div class="mobile-toggle" onclick="toggleMobileMenu()">
+            <div class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="menu-items">
+            <li class="menu-item menu-item-1">
+                <a href="#reasons">Our reasons</a>
+            </li>
+            <li class="menu-item menu-item-2">
+                <a href="#solutions">Our solutions</a>
+            </li>
+            <li class="menu-item menu-item-3">
+                <a href="#">Technology</a>
+            </li>
+            <li class="menu-item menu-item-4">
+                <a href="#">Careers</a>
+            </li>
+            <li class="menu-item menu-item-5">
+                <a href="#">Mailing list</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{{{body}}}
+
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Get in contact</h3>
+            <button class="close" onclick="closeModal('contact')">&times;</button>
+        </div>
+        <form id="contact-form" method="POST" action="send">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="msg">Message</label>
+                    <textarea name="msg" id="msg"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-dark-grey" onclick="closeModal('contact')">Cancel <span class="fa fa-times"></span></button>
+                <button type="submit" class="btn-green">Send <span class="fa fa-paper-plane"></span></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Success!</h3>
+            <button class="close" onclick="closeModal('success')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <span class="fa fa-check-circle"></span>
+            <p>Your form has been sent successfully. We will contact you as soon as possible!</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-dark-grey" onclick="closeModal('success')">Close <span class="fa fa-times"></span></button>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="footer-text">
+            <strong>AGAIN by LAKRAN</strong> <br />
+            <p class="address">
+                Apeldoornseweg 51<br />
+                Postbus 115<br />
+                6800 AC Arnhem<br />
+                The Netherlands
+            </p>
+            <p>
+                <span class="fa fa-phone"></span> <a class="green-link" href="tel:+31263792417">+31 26 - 379 24 17</a><br />
+                <span class="fa fa-envelope"></span> <a class="green-link" href="mailto:curious@again.nl">curious@again.nl</a>
+            </p>
+            <p>
+                Or fill in our contact form:<br />
+                <a class="btn-green" onclick="showModal('contact')">Contact form</a>
+            </p>
+        </div>
+        <div id="map" class="footer-maps"></div>
+    </div>
+    <div class="other-brands">
+        <h6>AGAIN by LAKRAN is part of <a class="green-link" href="http://lakran.com" target="_blank">LAKRAN Commerce Group</a></h6>
+        <p>Other companies are:</p>
+        <div class="companies">
+            <a href="http://simplifyingpurchasing.com" target="_blank" title="LAKRAN Procurement Professionals">
+                <img src="./public/images/lakran-applogo.jpg" alt="LAKRAN Procurement Professionals Logo">
+            </a>
+            <a href="http://lakran.com/again-stichting" target="_blank" title="AGAIN stichting">
+                <img src="./public/images/against-applogo.png" alt="AGAIN stichting Logo">
+            </a>
+            <a href="http://flexforcemonkey.com" target="_blank" title="FlexForceMonkey">
+                <img src="./public/images/ffm-applogo.png" alt="FlexForceMonkey Logo">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="./public/js/jquery-3.3.1.min.js"></script>
+<script src="./public/js/unslider.min.js"></script>
+<script>
+    // Load Google Maps
+    function initMap() {
+        var uluru = {lat: 51.987260, lng: 5.908726};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9kvdsBwPUBpm2ek--o_hmg8c2WQ64DyU&callback=initMap"></script>
+<script src="./public/js/script.js"></script>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.6'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>
