@@ -27,6 +27,11 @@ $(document).ready(function() {
         }
     });
 
+    if( $('#nav-bar').hasClass('sticky') ) {
+        var contentHeight = $('#nav-bar').height() + 96;
+        $('#reasons').css('margin-top', contentHeight + 'px');
+    }
+
     // Set height for different elements
     heightElements();
     $(window).resize(function() {
@@ -44,6 +49,21 @@ $(document).ready(function() {
         $('#success-modal').fadeIn();
     }
 });
+
+// Scroll to right reason
+function scrollToReason($event) {
+    $('html, body').animate({
+        scrollTop: $('#reasons').offset().top - 120
+    }, 1000);
+    selectReason($event);
+}
+
+function scrollToSolution($event) {
+    $('html, body').animate({
+        scrollTop: $('#solutions .' + $event).offset().top - 120
+    }, 1000);
+    showSolution($event);
+}
 
 // When page is loaded set interval to change the reasons
 var reasonIndex = 2;

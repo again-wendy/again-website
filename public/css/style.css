@@ -258,6 +258,11 @@ label {
   text-align: center;
 }
 
+/* line 187, ../sass/_partials/_base-styles.scss */
+.entire-width {
+  width: 100%;
+}
+
 /* line 1, ../sass/_partials/_hero-slider.scss */
 #hero-slider {
   position: relative;
@@ -419,13 +424,13 @@ label {
   }
 }
 /* line 112, ../sass/_partials/_hero-slider.scss */
-#hero-slider .slide-container .buttons button {
+#hero-slider .slide-container .buttons .btn-white-transparent-xl {
   width: 200px;
   margin-bottom: 10px;
 }
 @media (max-width: 575px) {
   /* line 112, ../sass/_partials/_hero-slider.scss */
-  #hero-slider .slide-container .buttons button {
+  #hero-slider .slide-container .buttons .btn-white-transparent-xl {
     padding: 10px 12px;
     font-size: 1.2rem;
     width: 175px;
@@ -433,7 +438,7 @@ label {
 }
 @media (max-width: 375px) {
   /* line 112, ../sass/_partials/_hero-slider.scss */
-  #hero-slider .slide-container .buttons button {
+  #hero-slider .slide-container .buttons .btn-white-transparent-xl {
     width: 100%;
   }
 }
