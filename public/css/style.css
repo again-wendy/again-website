@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'ZwoOT';
-  src: url("fonts/ZwoOT-Light.eot");
-  src: url("fonts/ZwoOT-Light.eot?#iefix") format("embedded-opentype"), url("fonts/ZwoOT-Light.woff") format("woff"), url("fonts/ZwoOT-Light.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.eot");
+  src: url("http://againtest.azurewebsites.net/public//fonts/ZwoOT-Light.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'ZwoOT-Xbold';
-  src: url("fonts/ZwoOT-Xbold.eot");
-  src: url("fonts/ZwoOT-Xbold.eot?#iefix") format("embedded-opentype"), url("fonts/ZwoOT-Xbold.woff") format("woff"), url("fonts/ZwoOT-Xbold.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.eot");
+  src: url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.ttf") format("truetype");
   font-weight: 800;
 }
 @font-face {
   font-family: 'ZwoOT-SemiBd';
-  src: url("fonts/ZwoOT-SemiBd.eot");
-  src: url("fonts/ZwoOT-SemiBd.eot?#iefix") format("embedded-opentype"), url("fonts/ZwoOT-SemiBd.woff") format("woff"), url("fonts/ZwoOT-SemiBd.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.eot");
+  src: url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("fonts/LifestyleM54.eot");
-  src: url("fonts/LifestyleM54.eot?#iefix") format("embedded-opentype"), url("fonts/LifestyleM54.woff2") format("woff2"), url("fonts/LifestyleM54.woff") format("woff"), url("fonts/LifestyleM54.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54.eot");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54.woff2") format("woff2"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("fonts/LifestyleM54_1.eot");
-  src: url("fonts/LifestyleM54_1.eot?#iefix") format("embedded-opentype"), url("fonts/LifestyleM54_1.woff2") format("woff2"), url("fonts/LifestyleM54_1.woff") format("woff"), url("fonts/LifestyleM54_1.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.eot");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.woff2") format("woff2"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("fonts/LifestyleM54_2.eot");
-  src: url("fonts/LifestyleM54_2.eot?#iefix") format("embedded-opentype"), url("fonts/LifestyleM54_2.woff2") format("woff2"), url("fonts/LifestyleM54_2.woff") format("woff"), url("fonts/LifestyleM54_2.ttf") format("truetype");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.eot");
+  src: url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.eot?#iefix") format("embedded-opentype"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.woff2") format("woff2"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.woff") format("woff"), url("http://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -321,7 +321,7 @@ label {
 }
 /* line 41, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-1 {
-  background-image: url("http://localhost:3000/public/images/profit-overlay.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/profit-overlay.jpg");
 }
 @media (max-width: 575px) {
   /* line 43, ../sass/_partials/_hero-slider.scss */
@@ -349,7 +349,7 @@ label {
 }
 /* line 61, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-2 {
-  background-image: url("http://localhost:3000/public/images/planet-overlay.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/planet-overlay.jpg");
 }
 /* line 63, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-2 .text {
@@ -374,7 +374,7 @@ label {
 }
 /* line 78, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-3 {
-  background-image: url("http://localhost:3000/public/images/people-overlay.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/people-overlay.jpg");
 }
 /* line 80, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-3 .text {
@@ -877,7 +877,7 @@ section .section-title {
 }
 /* line 145, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .profit .image-block {
-  background-image: url("http://localhost:3000/public/images/profit.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/profit.jpg");
 }
 /* line 148, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .profit .icon-block img {
@@ -891,11 +891,11 @@ section .section-title {
 }
 /* line 154, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .planet .image-block {
-  background-image: url("http://localhost:3000/public/images/planet.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/planet.jpg");
 }
 /* line 157, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .people .image-block {
-  background-image: url("http://localhost:3000/public/images/people.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/people.jpg");
 }
 
 /* line 165, ../sass/_partials/_sections.scss */
@@ -1135,7 +1135,7 @@ section .section-title {
 
 /* line 9, ../sass/_partials/_banner.scss */
 .banner-1 {
-  background-image: url("http://localhost:3000/public/images/connect.jpg");
+  background-image: url("http://againtest.azurewebsites.net/public/images/connect.jpg");
 }
 
 /* line 13, ../sass/_partials/_banner.scss */
