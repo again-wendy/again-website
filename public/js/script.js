@@ -20,16 +20,16 @@ $(document).ready(function() {
         var contentHeight = $("#nav-bar").height() + 96;
         if($(window).scrollTop() > aboveNav) {
             $("#nav-bar").addClass("sticky");
-            $("#reasons").css("margin-top', contentHeight + 'px");
+            $("#reasons").css("margin-top", contentHeight + "px");
         } else {
             $("#nav-bar").removeClass("sticky");
-            $("#reasons").css("margin-top', '96px");
+            $("#reasons").css("margin-top", "96px");
         }
     });
 
     if( $("#nav-bar").hasClass("sticky") ) {
         var contentHeight = $("#nav-bar").height() + 96;
-        $("#reasons").css("margin-top', contentHeight + 'px");
+        $("#reasons").css("margin-top", contentHeight + "px");
     }
 
     // Set height for different elements
@@ -93,21 +93,21 @@ function heightElements() {
     // Set height circles in #reasons
     var circle = $("#reasons .circle");
     var circleWidth = circle.width();
-    circle.css("height', circleWidth + 'px");
+    circle.css("height", circleWidth + "px");
 
     // Set height circles in .icon-block
     var circleBlock = $("#reasons .icon-block");
     var circleBlockWidth = circleBlock.width();
-    circleBlock.css("height', circleBlockWidth + 'px");
+    circleBlock.css("height", circleBlockWidth + "px");
 
     // Set all reasons same height
     var peopleHeight = $("#reasons .block-reasons .people").height();
-    $("#reasons .block-reasons .profit").css("height', peopleHeight + 'px");
-    $("#reasons .block-reasons .planet").css("height', peopleHeight + 'px");
+    $("#reasons .block-reasons .profit").css("height", peopleHeight + "px");
+    $("#reasons .block-reasons .planet").css("height", peopleHeight + "px");
 
     // Set height of map so its the same as the text
     var heightText = $("#footer .footer-text").height();
-    $("#map").css("height', heightText + 'px");
+    $("#map").css("height", heightText + "px");
 
     // If screen is bigger than 668px set top of read more btns in solution banners
     if($(window).width() > 668) {
@@ -124,8 +124,8 @@ function selectReason($event, reason = undefined) {
     if($event !== undefined) {
         clearInterval(reasonInterval);
         $("#reasons .block-reasons ." + $event).show();
-        $("#reasons .all-reasons .' + $event + ' .circle").addClass("active");
-        $("#reasons .all-reasons .' + $event + ' .block-title").addClass("active");
+        $("#reasons .all-reasons ." + $event + " .circle").addClass("active");
+        $("#reasons .all-reasons ." + $event + " .block-title").addClass("active");
     } else if (reason !== undefined) {
         if (reason === 1) {
             $("#reasons .block-reasons .profit").show();
@@ -183,7 +183,7 @@ function showModal(modalName) {
 }
 
 function closeModal(modalName) {
-    $("#' + modalName + '-modal").fadeOut();
+    $("#" + modalName + "-modal").fadeOut();
 }
 
 function closeSuccessModal() {
@@ -197,7 +197,7 @@ function closeSuccessModal() {
 $(document).mouseup(function(e) {
     var modal = $("#contact-modal .modal-content");
 
-    if($("#contact-modal").css("display") != "none") {
+    if($("#contact-modal").css("display") !== "none") {
         // If the target of the click is not the container nor a descendent of the container, hide it
         if(!modal.is(e.target) && modal.has(e.target).length === 0) {
             $("#contact-modal").fadeOut();
@@ -207,7 +207,7 @@ $(document).mouseup(function(e) {
 $(document).mouseup(function(e) {
     var modal = $("#success-modal .modal-content");
 
-    if($("#success-modal").css("display") != "none") {
+    if($("#success-modal").css("display") !== "none") {
         // If the target of the click is not the container nor a descendent of the container, hide it
         if(!modal.is(e.target) && modal.has(e.target).length === 0) {
             closeSuccessModal();
