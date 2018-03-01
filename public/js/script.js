@@ -50,6 +50,16 @@ $(document).ready(function() {
     }
 });
 
+// Scroll to menu item
+function menuClick(name) {
+    $('html, body').animate({
+        scrollTop: $(name).offset().top - 120
+    }, 1000);
+    if($(window).width() < 769) {
+        toggleMobileMenu();
+    }
+}
+
 // Scroll to right reason
 function scrollToReason($event) {
     $('html, body').animate({
@@ -58,6 +68,7 @@ function scrollToReason($event) {
     selectReason($event);
 }
 
+// Scroll to right solution
 function scrollToSolution($event) {
     $('html, body').animate({
         scrollTop: $('#solutions .' + $event).offset().top - 120
@@ -166,6 +177,9 @@ function toggleMobileMenu() {
 
 function showModal(modalName) {
     $('#' + modalName + '-modal').fadeIn();
+    if(modalName == 'contact' && grecaptcha.getResponse() == '') {
+        $('#contact-modal button[type=submit]').disable(true);
+    }
 }
 
 function closeModal(modalName) {
@@ -223,10 +237,20 @@ function sendForm(event) {
     data.subject = $('#contact-form #subject').val();
     data.msg = $('#contact-form #msg').val();
 
-    $.ajax({
-        type: 'POST',
-        url: '/send',
-        data: data,
-        dataType: 'application/json'
-    });
+    if (grecaptcha.getResponse() != '') {
+        $.ajax({
+            type: 'POST',
+            url: '/send',
+            data: data,
+            dataType: 'application/json',
+        });
+    }
 }
+
+jQuery.fn.extend({
+    disable: function(state) {
+        return this.each(function() {
+            this.disabled = state;
+        });
+    }
+});

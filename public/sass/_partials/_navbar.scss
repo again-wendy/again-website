@@ -13,6 +13,7 @@
         }
         img {
             height: 100%;
+            cursor: pointer;
         }
     }
     .right-menu {
@@ -115,6 +116,7 @@
                     height: 100%;
                     padding: 3vh 15px;
                     text-align: center;
+                    cursor: pointer;
                     &:hover, &:focus, &:active {
                         background: $dark-grey;
                         color: white;

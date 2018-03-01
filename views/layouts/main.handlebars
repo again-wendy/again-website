@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGAIN by LAKRAN</title>
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="public/images/favicons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://againtest.azurewebsites.net/public/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://againtest.azurewebsites.net/public/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://againtest.azurewebsites.net/public/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://againtest.azurewebsites.net/public/images/favicons/site.webmanifest">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff"> 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-    <link rel="stylesheet" href="public/css/normalize.css">
-    <link rel="stylesheet" href="public/css/unslider.min.css">
-    <link rel="stylesheet" href="public/css/unslider-dots.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/normalize.css">
+    <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/unslider.min.css">
+    <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/unslider-dots.css">
+    <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/style.css">
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Other scripts -->
+    <script src="https://againtest.azurewebsites.net/public/js/jquery-3.3.1.min.js"></script>
+    <script src="https://againtest.azurewebsites.net/public/js/unslider.min.js"></script>
+    <script src="https://againtest.azurewebsites.net/public/js/script.js"></script>
 </head>
 <body>
 <div id="hero-slider">
     <div class="slide-container">
         <ul>
             <li class="myslides slide-1">
-                <img class="logo" src="./public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
+                <img class="logo" src="https://againtest.azurewebsites.net/public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
                 <div class="text">Software to connect companies for creating economic value</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('profit')" class="btn-white-transparent-xl">Our reasons</a><br />
@@ -31,7 +37,7 @@
                 </div>
             </li>
             <li class="myslides slide-2">
-                <img class="logo" src="./public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
+                <img class="logo" src="https://againtest.azurewebsites.net/public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
                 <div class="text">Software to connect companies for saving natural resources</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('planet')" href="#reasons" class="btn-white-transparent-xl">Our reasons</a><br />
@@ -39,7 +45,7 @@
                 </div>
             </li>
             <li class="myslides slide-3">
-                <img class="logo" src="./public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
+                <img class="logo" src="https://againtest.azurewebsites.net/public/images/again-cloud-commerce-company.png" alt="AGAIN Cloud Commerce Company">
                 <div class="text">Software to connect companies for enabling communities</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('people')" href="#reasons" class="btn-white-transparent-xl">Our reasons</a><br />
@@ -52,7 +58,7 @@
 
 <nav id="nav-bar">
     <div class="left-menu">
-        <img src="./public/images/again-cloud-commerce-company-dark.png" alt="AGAIN Cloud Commerce Company Logo">
+        <img onclick="menuClick('#hero-slider')" src="https://againtest.azurewebsites.net/public/images/again-cloud-commerce-company-dark.png" alt="AGAIN Cloud Commerce Company Logo">
     </div>
     <div class="right-menu">
         <div class="mobile-toggle" onclick="toggleMobileMenu()">
@@ -64,19 +70,19 @@
         </div>
         <ul class="menu-items">
             <li class="menu-item menu-item-1">
-                <a href="#reasons">Our reasons</a>
+                <a onclick="menuClick('#reasons')">Our reasons</a>
             </li>
             <li class="menu-item menu-item-2">
-                <a href="#solutions">Our solutions</a>
+                <a onclick="menuClick('#solutions')">Our solutions</a>
             </li>
             <li class="menu-item menu-item-3">
-                <a href="#">Technology</a>
+                <a onclick="menuClick('#technology')">Technology</a>
             </li>
             <li class="menu-item menu-item-4">
-                <a href="#">Careers</a>
+                <a onclick="menuClick('#careers')">Careers</a>
             </li>
             <li class="menu-item menu-item-5">
-                <a href="#">Mailing list</a>
+                <a onclick="menuClick('#mailing')">Mailing list</a>
             </li>
         </ul>
     </div>
@@ -108,6 +114,7 @@
                     <label for="msg">Message</label>
                     <textarea name="msg" id="msg"></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3"></div>
             </div>
             <div class="modal-footer">
                 <button class="btn-dark-grey" onclick="closeModal('contact')">Cancel <span class="fa fa-times"></span></button>
@@ -159,20 +166,18 @@
         <p>Other companies are:</p>
         <div class="companies">
             <a href="http://simplifyingpurchasing.com" target="_blank" title="LAKRAN Procurement Professionals">
-                <img src="./public/images/lakran-applogo.jpg" alt="LAKRAN Procurement Professionals Logo">
+                <img src="https://againtest.azurewebsites.net/public/images/lakran-applogo.jpg" alt="LAKRAN Procurement Professionals Logo">
             </a>
             <a href="http://lakran.com/again-stichting" target="_blank" title="AGAIN stichting">
-                <img src="./public/images/against-applogo.png" alt="AGAIN stichting Logo">
+                <img src="https://againtest.azurewebsites.net/public/images/against-applogo.png" alt="AGAIN stichting Logo">
             </a>
             <a href="http://flexforcemonkey.com" target="_blank" title="FlexForceMonkey">
-                <img src="./public/images/ffm-applogo.png" alt="FlexForceMonkey Logo">
+                <img src="https://againtest.azurewebsites.net/public/images/ffm-applogo.png" alt="FlexForceMonkey Logo">
             </a>
         </div>
     </div>
 </footer>
 
-<script src="./public/js/jquery-3.3.1.min.js"></script>
-<script src="./public/js/unslider.min.js"></script>
 <script>
     // Load Google Maps
     function initMap() {
@@ -188,9 +193,8 @@
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9kvdsBwPUBpm2ek--o_hmg8c2WQ64DyU&callback=initMap"></script>
-<script src="./public/js/script.js"></script>
-<script id="__bs_script__">//<![CDATA[
+{{!-- <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.6'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+//]]></script> --}}
 </body>
 </html>
