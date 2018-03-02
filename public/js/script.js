@@ -175,11 +175,12 @@ function toggleMobileMenu() {
     }
 }
 
+function recaptchaCallback() {
+    $("#contact-submit").removeAttr("disabled");
+}
+
 function showModal(modalName) {
     $("#" + modalName + "-modal").fadeIn();
-    if(modalName == "contact" && grecaptcha.getResponse() == "") {
-        $("#contact-modal button[type=submit]").disable(true);
-    }
 }
 
 function closeModal(modalName) {
@@ -254,3 +255,13 @@ jQuery.fn.extend({
         });
     }
 });
+
+(function() {
+    var originalAddClassMethod = jQuery.fn.addClass;
+
+    jQuery.fn.addClass = function() {
+        var result = originalAddClassMethod.apply( this, arguments );
+        jQuery(this).trigger('cssClassChanged');
+        return result;
+    }
+})();

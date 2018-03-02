@@ -110,11 +110,11 @@
                     <label for="msg">Message</label>
                     <textarea name="msg" id="msg"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3"></div>
+                <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3" data-callback="recaptchaCallback"></div>
             </div>
             <div class="modal-footer">
                 <button class="btn-dark-grey" onclick="closeModal('contact')">Cancel <span class="fa fa-times"></span></button>
-                <button type="submit" class="btn-green">Send <span class="fa fa-paper-plane"></span></button>
+                <button id="contact-submit" type="submit" disabled="disabled" class="btn-green">Send <span class="fa fa-paper-plane"></span></button>
             </div>
         </form>
     </div>
