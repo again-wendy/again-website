@@ -117,7 +117,7 @@ function heightElements() {
 }
 
 // Select the right reason. When a reason is clicked, stop the interval
-function selectReason($event, reason = undefined) {
+function selectReason($event, reason) {
     $("#reasons .block-reasons .block-reason").hide();
     $("#reasons .all-reasons .column .circle").removeClass("active");
     $("#reasons .all-reasons .column .block-title").removeClass("active");
