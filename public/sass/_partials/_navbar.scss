@@ -115,7 +115,7 @@
                 padding-left: 40px;
             }
             @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
-                height: $landscape-nav-height;
+                height: auto;
             }
             .menu-item {
                 @media(max-width: 768px) {
