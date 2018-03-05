@@ -3,6 +3,9 @@
     background-color: $lighter-grey;
     z-index: 9999;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+        height: $landscape-nav-height;
+    }
     .left-menu {
         width: 25%;
         padding: 8px 0 8px 35px;
@@ -10,6 +13,10 @@
         float: left;
         @media (max-width: 768px) {
             width: 49%;
+        }
+        @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+            height: $landscape-nav-height;
+            padding: 4px 0 4px 35px;
         }
         img {
             height: 100%;
@@ -24,12 +31,18 @@
         @media (max-width: 768px) {
             width: 49%;
         }
+        @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+            height: $landscape-nav-height;
+        }
         .mobile-toggle {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             height: $nav-height;
             font-size: 1.4rem;
+            @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+                height: $landscape-nav-height;
+            }
             .nav-icon {
                 width: 40px;
                 height: 25px;
@@ -101,6 +114,9 @@
                 z-index: 9999;
                 padding-left: 40px;
             }
+            @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+                height: $landscape-nav-height;
+            }
             .menu-item {
                 @media(max-width: 768px) {
                     padding: 12px 35px 12px 0;
@@ -138,4 +154,7 @@
     top: 0;
     width: 100%;
     margin-bottom: $nav-height;
+    @media (max-width: 1024px) and (max-height: 485px) and (orientation: landscape) {
+        margin-bottom: $landscape-nav-height;
+    }
 }
