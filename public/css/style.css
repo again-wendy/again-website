@@ -150,7 +150,7 @@ a.green-link:visited {
 a.green-link:focus,
 a.green-link:hover,
 a.green-link:active {
-  color: #a0a803;
+  color: #b4bd03;
 }
 
 /* line 85, ../sass/_partials/_base-styles.scss */
@@ -217,7 +217,7 @@ label {
 }
 /* line 144, ../sass/_partials/_base-styles.scss */
 .btn-green:hover, .btn-green-xl:hover, .btn-dark-grey-xl:hover, .btn-green:focus, .btn-green-xl:focus, .btn-dark-grey-xl:focus, .btn-green:active, .btn-green-xl:active, .btn-dark-grey-xl:active {
-  background-color: #a0a803;
+  background-color: #b4bd03;
 }
 /* line 149, ../sass/_partials/_base-styles.scss */
 .btn-green:disabled, .btn-green-xl:disabled, .btn-dark-grey-xl:disabled, .btn-green[disabled], [disabled].btn-green-xl, [disabled].btn-dark-grey-xl {
@@ -921,7 +921,7 @@ section .section-title {
 @media (max-width: 480px) {
   /* line 66, ../sass/_partials/_sections.scss */
   #reasons .all-reasons .column .block-title.active {
-    background: #a0a803;
+    background: #b4bd03;
   }
 }
 /* line 72, ../sass/_partials/_sections.scss */
