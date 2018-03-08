@@ -165,26 +165,35 @@ section {
         width: 100%;
         height: 220px;
         position: relative;
+        -webkit-perspective: 800px;
         perspective: 800px;
         margin-bottom: 20px;
         .card {
             width: 100%;
             height: 100%;
             position: absolute;
+            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+            -ms-transform-style: none;
+            -webkit-transition: -webkit-transform 1s;
+            transition: -webkit-transform 1s;
+            -o-transition: transform 1s;
             transition: transform 1s;
+            transition: transform 1s, -webkit-transform 1s;
             figure {
                 margin: 0;
                 display: block;
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
                 .solution-title {
                     position: absolute;
-                    right: 20px;
-                    top: -20px;
+                    right: 25px;
+                    top: -25px;
                     color: white;
+                    padding: 10px;
                 }
                 .solution-text {
                     padding: 0 25px 15px 25px;
@@ -211,22 +220,93 @@ section {
             .back {
                 background: $light-grey;
                 transform: rotateY(180deg);
+                -ms-transform: rotateX(180deg);
             }
         }
         .card-1 .front {
-            background-image: url('http://localhost:3000/public/images/flexforcemonkey-banner.jpg');
+            background-image: url('https://againtest.azurewebsites.net/public/images/flexforcemonkey-banner.jpg');
             .solution-title {
                 color: $dark-grey;
             }
         }
         .card-2 .front {
-            background-image: url('http://localhost:3000/public/images/prototype-banner.jpg');
+            background-image: url('https://againtest.azurewebsites.net/public/images/prototype-banner.jpg');
         }
         .card-3 .front {
-            background-image: url('http://localhost:3000/public/images/deployments-banner.jpg');
+            background-image: url('https://againtest.azurewebsites.net/public/images/deployments-banner.jpg');
         }
         .card.flipped {
             transform: rotateY(180deg);
+        }
+        @media(max-width: 768px) {
+            perspective: none;
+            height: 250px;
+            .card {
+                -webkit-transform-style: flat;
+                transform-style: flat;
+                -ms-transform-style: none;
+                figure {
+                    backface-visibility: visible;
+                    .back-title {
+                        padding: 15px;
+                    }
+                    .solution-text {
+                        padding: 0 15px 15px 15px;
+                    }
+                    .link-btn {
+                        top: 195px;
+                        left: 15px;
+                    }
+                    .read-btn {
+                        top: 195px;
+                        right: 15px;
+                    }
+                }
+                .back {
+                    transform: rotateY(0deg);
+                    -ms-transform: rotateX(0deg);
+                    display: none;
+                }
+            }
+            .card-1 .solution-title {
+                background: rgba(255, 255, 255, 0.4);
+            }
+            .card.flipped {
+                transform: none;
+            }
+        }
+        @media (max-width: 600px) {
+            .card {
+                figure {
+                    .solution-title {
+                        left: 0;
+                        right: 0;
+                        padding: 0;
+                        text-align: center;
+                        top: 15px;
+                    }
+                    .back-title {
+                        font-size: 1.5rem;
+                        padding-bottom: 10px;
+                    }
+                    .solution-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 380px) {
+            height: 300px;
+            .card {
+                figure {
+                    .solution-title {
+                        font-size: 2rem;
+                    }
+                    .read-btn, .link-btn {
+                        top: 245px;
+                    }
+                }
+            }
         }
     }
 }

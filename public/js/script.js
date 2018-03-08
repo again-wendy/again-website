@@ -53,6 +53,13 @@ $(document).ready(function() {
 
 function flip($event) {
     $("." + $event).toggleClass("flipped");
+    if($(window).width() < 769) {
+        if ($("." + $event + " .back").css("display") === "none") {
+            $("." + $event + " .back").slideDown();
+        } else {
+            $("." + $event + " .back").slideUp();
+        }
+    }
 }
 
 // Scroll to menu item
@@ -155,6 +162,13 @@ function selectReason($event, reason) {
 // Toggle text from solution banner
 function showSolution($event) {
     $("." + $event).addClass("flipped");
+    if($(window).width() < 769) {
+        if ($("." + $event + " .back").css("display") === "none") {
+            $("." + $event + " .back").slideDown();
+        } else {
+            $("." + $event + " .back").slideUp();
+        }
+    }
 }
 
 // Mobile menu toggle

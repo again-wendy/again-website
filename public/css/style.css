@@ -1053,110 +1053,202 @@ section .section-title {
   width: 100%;
   height: 220px;
   position: relative;
+  -webkit-perspective: 800px;
   perspective: 800px;
   margin-bottom: 20px;
 }
-/* line 170, ../sass/_partials/_sections.scss */
+/* line 171, ../sass/_partials/_sections.scss */
 #solutions .card-container .card {
   width: 100%;
   height: 100%;
   position: absolute;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -ms-transform-style: none;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
-/* line 176, ../sass/_partials/_sections.scss */
+/* line 183, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure {
   margin: 0;
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 183, ../sass/_partials/_sections.scss */
+/* line 191, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure .solution-title {
   position: absolute;
-  right: 20px;
-  top: -20px;
+  right: 25px;
+  top: -25px;
   color: white;
+  padding: 10px;
 }
-/* line 189, ../sass/_partials/_sections.scss */
+/* line 198, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure .solution-text {
   padding: 0 25px 15px 25px;
   margin: 0;
 }
-/* line 193, ../sass/_partials/_sections.scss */
+/* line 202, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure .link-btn {
   position: absolute;
   top: 160px;
   left: 25px;
 }
-/* line 198, ../sass/_partials/_sections.scss */
+/* line 207, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure .read-btn {
   position: absolute;
   top: 160px;
   right: 25px;
 }
-/* line 203, ../sass/_partials/_sections.scss */
+/* line 212, ../sass/_partials/_sections.scss */
 #solutions .card-container .card figure .back-title {
   margin: 0;
   padding: 25px 0 10px 25px;
 }
-/* line 208, ../sass/_partials/_sections.scss */
+/* line 217, ../sass/_partials/_sections.scss */
 #solutions .card-container .card .front {
   background-size: cover;
 }
-/* line 211, ../sass/_partials/_sections.scss */
+/* line 220, ../sass/_partials/_sections.scss */
 #solutions .card-container .card .back {
   background: #ececec;
   transform: rotateY(180deg);
+  -ms-transform: rotateX(180deg);
 }
-/* line 216, ../sass/_partials/_sections.scss */
+/* line 226, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-1 .front {
-  background-image: url("http://localhost:3000/public/images/flexforcemonkey-banner.jpg");
+  background-image: url("https://againtest.azurewebsites.net/public/images/flexforcemonkey-banner.jpg");
 }
-/* line 218, ../sass/_partials/_sections.scss */
+/* line 228, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-1 .front .solution-title {
   color: #2b2b2b;
 }
-/* line 222, ../sass/_partials/_sections.scss */
+/* line 232, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-2 .front {
-  background-image: url("http://localhost:3000/public/images/prototype-banner.jpg");
+  background-image: url("https://againtest.azurewebsites.net/public/images/prototype-banner.jpg");
 }
-/* line 225, ../sass/_partials/_sections.scss */
+/* line 235, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-3 .front {
-  background-image: url("http://localhost:3000/public/images/deployments-banner.jpg");
+  background-image: url("https://againtest.azurewebsites.net/public/images/deployments-banner.jpg");
 }
-/* line 228, ../sass/_partials/_sections.scss */
+/* line 238, ../sass/_partials/_sections.scss */
 #solutions .card-container .card.flipped {
   transform: rotateY(180deg);
 }
+@media (max-width: 768px) {
+  /* line 164, ../sass/_partials/_sections.scss */
+  #solutions .card-container {
+    perspective: none;
+    height: 250px;
+  }
+  /* line 244, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card {
+    -webkit-transform-style: flat;
+    transform-style: flat;
+    -ms-transform-style: none;
+  }
+  /* line 248, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure {
+    backface-visibility: visible;
+  }
+  /* line 250, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .back-title {
+    padding: 15px;
+  }
+  /* line 253, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .solution-text {
+    padding: 0 15px 15px 15px;
+  }
+  /* line 256, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .link-btn {
+    top: 195px;
+    left: 15px;
+  }
+  /* line 260, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .read-btn {
+    top: 195px;
+    right: 15px;
+  }
+  /* line 265, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card .back {
+    transform: rotateY(0deg);
+    -ms-transform: rotateX(0deg);
+    display: none;
+  }
+  /* line 271, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card-1 .solution-title {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  /* line 274, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card.flipped {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  /* line 281, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .solution-title {
+    left: 0;
+    right: 0;
+    padding: 0;
+    text-align: center;
+    top: 15px;
+  }
+  /* line 288, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .back-title {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  /* line 292, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .solution-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  /* line 164, ../sass/_partials/_sections.scss */
+  #solutions .card-container {
+    height: 300px;
+  }
+  /* line 302, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .solution-title {
+    font-size: 2rem;
+  }
+  /* line 305, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure .read-btn, #solutions .card-container .card figure .link-btn {
+    top: 245px;
+  }
+}
 
 @media (max-width: 580px) {
-  /* line 235, ../sass/_partials/_sections.scss */
+  /* line 315, ../sass/_partials/_sections.scss */
   #three-colums .row {
     flex-direction: column;
   }
 }
-/* line 239, ../sass/_partials/_sections.scss */
+/* line 319, ../sass/_partials/_sections.scss */
 #three-colums .row .column {
   background-color: #ececec;
   margin-right: 15px;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 244, ../sass/_partials/_sections.scss */
+/* line 324, ../sass/_partials/_sections.scss */
 #three-colums .row .column:last-child {
   margin-right: 0;
 }
 @media (max-width: 580px) {
-  /* line 239, ../sass/_partials/_sections.scss */
+  /* line 319, ../sass/_partials/_sections.scss */
   #three-colums .row .column {
     margin-bottom: 20px;
     margin-right: 0;
   }
 }
-/* line 251, ../sass/_partials/_sections.scss */
+/* line 331, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-title {
   margin: 0;
   padding: 10px;
@@ -1165,22 +1257,22 @@ section .section-title {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 678px) {
-  /* line 251, ../sass/_partials/_sections.scss */
+  /* line 331, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-title {
     font-size: 1.6rem;
   }
 }
-/* line 261, ../sass/_partials/_sections.scss */
+/* line 341, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text {
   padding: 0 15px 15px 15px;
 }
 @media (max-width: 678px) {
-  /* line 261, ../sass/_partials/_sections.scss */
+  /* line 341, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-text {
     padding: 0 10px 10px 10px;
   }
 }
-/* line 266, ../sass/_partials/_sections.scss */
+/* line 346, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text .indicates-required {
   font-size: 0.8rem;
   margin-bottom: 10px;
