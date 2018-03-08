@@ -295,6 +295,15 @@ section {
                 }
             }
         }
+        @media (max-width: 400px) {
+            .card {
+                figure {
+                    .read-btn, .link-btn {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
         @media (max-width: 380px) {
             height: 300px;
             .card {
@@ -304,6 +313,16 @@ section {
                     }
                     .read-btn, .link-btn {
                         top: 245px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 340px) {
+            .card-2 {
+                figure {
+                    .link-btn {
+                        top: 205px;
+                        right: 15px;
                     }
                 }
             }
