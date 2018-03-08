@@ -51,6 +51,10 @@ $(document).ready(function() {
     }
 });
 
+function flip($event) {
+    $("." + $event).toggleClass("flipped");
+}
+
 // Scroll to menu item
 function menuClick(name) {
     $("html, body").animate({
@@ -150,15 +154,7 @@ function selectReason($event, reason) {
 
 // Toggle text from solution banner
 function showSolution($event) {
-    var text = $("#solutions ." + $event + " .solution-text");
-    var btn = $("#solutions ." + $event + " button");
-    if( text.css("display") === "none" ) {
-        text.slideDown();
-        btn.html("Close <span class='fa fa-caret-up'></span>");
-    } else {
-        text.slideUp();
-        btn.html("Read more <span class='fa fa-caret-down'></span>");
-    }
+    $("." + $event).addClass("flipped");
 }
 
 // Mobile menu toggle

@@ -1048,203 +1048,115 @@ section .section-title {
   background-image: url("https://againtest.azurewebsites.net/public/images/people.jpg");
 }
 
-/* line 165, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .solution-banner {
+/* line 164, ../sass/_partials/_sections.scss */
+#solutions .card-container {
+  width: 100%;
+  height: 220px;
   position: relative;
+  perspective: 800px;
   margin-bottom: 20px;
 }
-/* line 168, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .solution-banner .solution-title {
+/* line 170, ../sass/_partials/_sections.scss */
+#solutions .card-container .card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+/* line 176, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/* line 183, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure .solution-title {
   position: absolute;
   right: 20px;
   top: -20px;
   color: white;
 }
-@media (max-width: 768px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    font-size: 2rem;
-  }
+/* line 189, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure .solution-text {
+  padding: 0 25px 15px 25px;
+  margin: 0;
 }
-@media (max-width: 668px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    top: -15px;
-  }
-}
-@media (max-width: 580px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    font-size: 1.6rem;
-    top: -10px;
-  }
-}
-@media (max-width: 475px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    right: 10px;
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 415px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    left: 10px;
-    width: 60%;
-  }
-}
-@media (max-width: 375px) {
-  /* line 168, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-title {
-    position: relative;
-    margin: 5px 0 15px 0;
-    left: 0;
-    width: 65%;
-    float: left;
-    color: #2b2b2b;
-    font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-    margin: 0;
-    padding-top: 5px;
-  }
-}
-/* line 204, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .solution-banner button {
+/* line 193, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure .link-btn {
   position: absolute;
-  right: 20px;
-  width: 120px;
+  top: 160px;
+  left: 25px;
 }
-@media (max-width: 668px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    top: 55px;
-  }
+/* line 198, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure .read-btn {
+  position: absolute;
+  top: 160px;
+  right: 25px;
 }
-@media (max-width: 580px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    font-size: 0.9rem;
-    width: 100px;
-    top: 45px;
-  }
+/* line 203, ../sass/_partials/_sections.scss */
+#solutions .card-container .card figure .back-title {
+  margin: 0;
+  padding: 25px 0 10px 25px;
 }
-@media (max-width: 475px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    right: 10px;
-    padding: 4px 8px;
-    width: 100px;
-    top: 35px;
-  }
+/* line 208, ../sass/_partials/_sections.scss */
+#solutions .card-container .card .front {
+  background-size: cover;
 }
-@media (max-width: 415px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    width: 35%;
-    top: 23px;
-  }
+/* line 211, ../sass/_partials/_sections.scss */
+#solutions .card-container .card .back {
+  background: #ececec;
+  transform: rotateY(180deg);
 }
-@media (max-width: 375px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    position: relative;
-    top: 0;
-    right: 0;
-  }
+/* line 216, ../sass/_partials/_sections.scss */
+#solutions .card-container .card-1 .front {
+  background-image: url("http://localhost:3000/public/images/flexforcemonkey-banner.jpg");
 }
-@media (max-width: 310px) {
-  /* line 204, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner button {
-    font-size: 0.7rem;
-  }
-}
-/* line 235, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .solution-banner .solution-text {
-  background-color: #ececec;
-  padding: 20px;
-  display: block;
-  width: 60%;
-  margin: -5px 0 20px auto;
-}
-/* line 241, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .solution-banner .solution-text a {
-  margin-top: 20px;
-}
-@media (max-width: 668px) {
-  /* line 235, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-text {
-    width: 80%;
-  }
-}
-@media (max-width: 415px) {
-  /* line 235, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-text {
-    width: 100%;
-  }
-}
-@media (max-width: 375px) {
-  /* line 235, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .solution-banner .solution-text {
-    margin-top: 0;
-  }
-}
-/* line 255, ../sass/_partials/_sections.scss */
-#solutions .solution-banners .flexforcemonkey .solution-title {
+/* line 218, ../sass/_partials/_sections.scss */
+#solutions .card-container .card-1 .front .solution-title {
   color: #2b2b2b;
 }
-@media (max-width: 415px) {
-  /* line 255, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .flexforcemonkey .solution-title {
-    top: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 30px;
-  }
+/* line 222, ../sass/_partials/_sections.scss */
+#solutions .card-container .card-2 .front {
+  background-image: url("http://localhost:3000/public/images/prototype-banner.jpg");
 }
-@media (max-width: 375px) {
-  /* line 255, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .flexforcemonkey .solution-title {
-    top: -1px;
-    background-color: transparent;
-  }
+/* line 225, ../sass/_partials/_sections.scss */
+#solutions .card-container .card-3 .front {
+  background-image: url("http://localhost:3000/public/images/deployments-banner.jpg");
 }
-@media (max-width: 375px) {
-  /* line 267, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .deployments .solution-title {
-    top: -1px;
-  }
-}
-@media (max-width: 318px) {
-  /* line 267, ../sass/_partials/_sections.scss */
-  #solutions .solution-banners .deployments .solution-title {
-    top: -10px;
-  }
+/* line 228, ../sass/_partials/_sections.scss */
+#solutions .card-container .card.flipped {
+  transform: rotateY(180deg);
 }
 
 @media (max-width: 580px) {
-  /* line 279, ../sass/_partials/_sections.scss */
+  /* line 235, ../sass/_partials/_sections.scss */
   #three-colums .row {
     flex-direction: column;
   }
 }
-/* line 283, ../sass/_partials/_sections.scss */
+/* line 239, ../sass/_partials/_sections.scss */
 #three-colums .row .column {
   background-color: #ececec;
   margin-right: 15px;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 288, ../sass/_partials/_sections.scss */
+/* line 244, ../sass/_partials/_sections.scss */
 #three-colums .row .column:last-child {
   margin-right: 0;
 }
 @media (max-width: 580px) {
-  /* line 283, ../sass/_partials/_sections.scss */
+  /* line 239, ../sass/_partials/_sections.scss */
   #three-colums .row .column {
     margin-bottom: 20px;
     margin-right: 0;
   }
 }
-/* line 295, ../sass/_partials/_sections.scss */
+/* line 251, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-title {
   margin: 0;
   padding: 10px;
@@ -1253,22 +1165,22 @@ section .section-title {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 678px) {
-  /* line 295, ../sass/_partials/_sections.scss */
+  /* line 251, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-title {
     font-size: 1.6rem;
   }
 }
-/* line 305, ../sass/_partials/_sections.scss */
+/* line 261, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text {
   padding: 0 15px 15px 15px;
 }
 @media (max-width: 678px) {
-  /* line 305, ../sass/_partials/_sections.scss */
+  /* line 261, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-text {
     padding: 0 10px 10px 10px;
   }
 }
-/* line 310, ../sass/_partials/_sections.scss */
+/* line 266, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text .indicates-required {
   font-size: 0.8rem;
   margin-bottom: 10px;

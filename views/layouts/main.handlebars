@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/normalize.css">
     <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/unslider.min.css">
     <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/unslider-dots.css">
-    <link rel="stylesheet" href="https://againtest.azurewebsites.net/public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <!-- Recaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {{!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
     <!-- META TAGS for Social Media -->
     <!-- Search Engine -->
     <meta name="description" content="Software to connect companies for creating economic value, saving natural resources and enabling communities.">
@@ -54,7 +54,7 @@
                 <div class="text">Software to connect companies for creating economic value</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('profit')" class="btn-white-transparent-xl">Our reasons</a><br />
-                    <a onclick="scrollToSolution('profit')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
+                    <a onclick="scrollToSolution('card-1')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
                 </div>
             </li>
             <li class="myslides slide-2">
@@ -62,7 +62,7 @@
                 <div class="text">Software to connect companies for saving natural resources</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('planet')" href="#reasons" class="btn-white-transparent-xl">Our reasons</a><br />
-                    <a onclick="scrollToSolution('planet')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
+                    <a onclick="scrollToSolution('card-2')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
                 </div>
             </li>
             <li class="myslides slide-3">
@@ -70,7 +70,7 @@
                 <div class="text">Software to connect companies for enabling communities</div>
                 <div class="buttons">
                     <a onclick="scrollToReason('people')" href="#reasons" class="btn-white-transparent-xl">Our reasons</a><br />
-                    <a onclick="scrollToSolution('people')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
+                    <a onclick="scrollToSolution('card-3')" href="#solutions" class="btn-white-transparent-xl">Our solutions</a>
                 </div>
             </li>
         </ul>
@@ -135,7 +135,7 @@
                     <label for="msg">Message</label>
                     <textarea name="msg" id="msg"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3" data-callback="recaptchaCallback"></div>
+                {{!-- <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3" data-callback="recaptchaCallback"></div> --}}
             </div>
             <div class="modal-footer">
                 <button class="btn-dark-grey" onclick="closeModal('contact')">Cancel <span class="fa fa-times"></span></button>
@@ -189,6 +189,9 @@
             <a href="http://simplifyingpurchasing.com" target="_blank" title="LAKRAN Procurement Professionals">
                 <img src="https://againtest.azurewebsites.net/public/images/lakran-applogo.jpg" alt="LAKRAN Procurement Professionals Logo">
             </a>
+            <a href="" target="_blank" title="LAKRAN VMS Services">
+                <img src="./public/images/lakran-vms-services-logo.png" alt="LAKRAN VMS Services">
+            </a>
             <a href="http://lakran.com/again-stichting" target="_blank" title="AGAIN stichting">
                 <img src="https://againtest.azurewebsites.net/public/images/against-applogo.png" alt="AGAIN stichting Logo">
             </a>
@@ -201,7 +204,7 @@
 
 <script src="https://againtest.azurewebsites.net/public/js/jquery-3.3.1.min.js"></script>
 <script src="https://againtest.azurewebsites.net/public/js/unslider.min.js"></script>
-<script src="https://againtest.azurewebsites.net/public/js/script.js"></script>
+<script src="./public/js/script.js"></script>
 <script>
     // Load Google Maps
     function initMap() {

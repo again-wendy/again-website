@@ -161,116 +161,72 @@ section {
 }
 
 #solutions {
-    .solution-banners {
-        .solution-banner {
-            position: relative;
-            margin-bottom: 20px;
-            .solution-title {
-                position: absolute;
-                right: 20px;
-                top: -20px;
-                color: white;
-                @media (max-width: 768px) {
-                    font-size: 2rem;
-                }
-                @media (max-width: 668px) {
-                    top: -15px;
-                }
-                @media (max-width: 580px) {
-                    font-size: 1.6rem;
-                    top: -10px;
-                }
-                @media (max-width: 475px) {
-                    right: 10px;
-                    font-size: 1.4rem;
-                }
-                @media (max-width: 415px) {
-                    left: 10px;
-                    width: 60%;
-                }
-                @media (max-width: 375px) {
-                    position: relative;
-                    margin: 5px 0 15px 0;
-                    left: 0;
-                    width: 65%;
-                    float: left;
-                    color: $dark-grey;
-                    font-family: $font-bold;
-                    font-size: 1.2rem;
-                    margin: 0;
-                    padding-top: 5px;
-                }
-            }
-            button {
-                position: absolute;
-                right: 20px;
-                width: 120px;
-                @media (max-width: 668px) {
-                    top: 55px;
-                }
-                @media (max-width: 580px) {
-                    font-size: 0.9rem;
-                    width: 100px;
-                    top: 45px;
-                }
-                @media (max-width: 475px) {
-                    right: 10px;
-                    padding: 4px 8px;
-                    width: 100px;
-                    top: 35px;
-                }
-                @media (max-width: 415px) {
-                    width: 35%;
-                    top: 23px;
-                }
-                @media (max-width: 375px) {
-                    position: relative;
-                    top: 0;
-                    right: 0;
-                }
-                @media (max-width: 310px) {
-                    font-size: 0.7rem;
-                }
-            }
-            .solution-text {
-                background-color: $light-grey;
-                padding: 20px;
+    .card-container {
+        width: 100%;
+        height: 220px;
+        position: relative;
+        perspective: 800px;
+        margin-bottom: 20px;
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            figure {
+                margin: 0;
                 display: block;
-                width: 60%;
-                margin: -5px 0 20px auto;
-                a {
-                    margin-top: 20px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                .solution-title {
+                    position: absolute;
+                    right: 20px;
+                    top: -20px;
+                    color: white;
                 }
-                @media (max-width: 668px) {
-                    width: 80%;
+                .solution-text {
+                    padding: 0 25px 15px 25px;
+                    margin: 0;
                 }
-                @media (max-width: 415px) {
-                    width: 100%;
+                .link-btn {
+                    position: absolute;
+                    top: 160px;
+                    left: 25px;
                 }
-                @media (max-width: 375px) {
-                    margin-top: 0;
+                .read-btn {
+                    position: absolute;
+                    top: 160px;
+                    right: 25px;
                 }
+                .back-title {
+                    margin: 0;
+                    padding: 25px 0 10px 25px;
+                }
+            }
+            .front {
+                background-size: cover;
+            }
+            .back {
+                background: $light-grey;
+                transform: rotateY(180deg);
             }
         }
-        .flexforcemonkey .solution-title {
-            color: $dark-grey;
-            @media (max-width: 415px) {
-                top: 5px;
-                background-color: rgba(255, 255, 255, 0.5);
-                height: 30px;
-            }
-            @media (max-width: 375px) {
-                top: -1px;
-                background-color: transparent;
+        .card-1 .front {
+            background-image: url('http://localhost:3000/public/images/flexforcemonkey-banner.jpg');
+            .solution-title {
+                color: $dark-grey;
             }
         }
-        .deployments .solution-title {
-            @media (max-width: 375px) {
-                top: -1px;
-            }
-            @media (max-width: 318px) {
-                top: -10px;
-            }
+        .card-2 .front {
+            background-image: url('http://localhost:3000/public/images/prototype-banner.jpg');
+        }
+        .card-3 .front {
+            background-image: url('http://localhost:3000/public/images/deployments-banner.jpg');
+        }
+        .card.flipped {
+            transform: rotateY(180deg);
         }
     }
 }
@@ -315,3 +271,124 @@ section {
         }
     }
 }
+
+
+// OLD
+
+// #solutions {
+//     .solution-banners {
+//         position: relative;
+//         perspective: 800px;
+//         .solution-banner {
+//             position: relative;
+//             margin-bottom: 20px;
+//             .solution-title {
+//                 position: absolute;
+//                 right: 20px;
+//                 top: -20px;
+//                 color: white;
+//                 @media (max-width: 768px) {
+//                     font-size: 2rem;
+//                 }
+//                 @media (max-width: 668px) {
+//                     top: -15px;
+//                 }
+//                 @media (max-width: 580px) {
+//                     font-size: 1.6rem;
+//                     top: -10px;
+//                 }
+//                 @media (max-width: 475px) {
+//                     right: 10px;
+//                     font-size: 1.4rem;
+//                 }
+//                 @media (max-width: 415px) {
+//                     left: 10px;
+//                     width: 60%;
+//                 }
+//                 @media (max-width: 375px) {
+//                     position: relative;
+//                     margin: 5px 0 15px 0;
+//                     left: 0;
+//                     width: 65%;
+//                     float: left;
+//                     color: $dark-grey;
+//                     font-family: $font-bold;
+//                     font-size: 1.2rem;
+//                     margin: 0;
+//                     padding-top: 5px;
+//                 }
+//             }
+//             button {
+//                 position: absolute;
+//                 right: 20px;
+//                 width: 120px;
+//                 top: 130px;
+//                 @media (max-width: 668px) {
+//                     top: 55px;
+//                 }
+//                 @media (max-width: 580px) {
+//                     font-size: 0.9rem;
+//                     width: 100px;
+//                     top: 45px;
+//                 }
+//                 @media (max-width: 475px) {
+//                     right: 10px;
+//                     padding: 4px 8px;
+//                     width: 100px;
+//                     top: 35px;
+//                 }
+//                 @media (max-width: 415px) {
+//                     width: 35%;
+//                     top: 23px;
+//                 }
+//                 @media (max-width: 375px) {
+//                     position: relative;
+//                     top: 0;
+//                     right: 0;
+//                 }
+//                 @media (max-width: 310px) {
+//                     font-size: 0.7rem;
+//                 }
+//             }
+//             .solution-text {
+//                 background-color: $light-grey;
+//                 padding: 20px;
+//                 display: block;
+//                 width: 60%;
+//                 margin: -5px 0 20px auto;
+//                 a {
+//                     margin-top: 20px;
+//                 }
+//                 @media (max-width: 668px) {
+//                     width: 80%;
+//                 }
+//                 @media (max-width: 415px) {
+//                     width: 100%;
+//                 }
+//                 @media (max-width: 375px) {
+//                     margin-top: 0;
+//                 }
+//             }
+//         }
+//         .flexforcemonkey .solution-title {
+//             color: $dark-grey;
+//             @media (max-width: 415px) {
+//                 top: 5px;
+//                 background-color: rgba(255, 255, 255, 0.5);
+//                 height: 30px;
+//             }
+//             @media (max-width: 375px) {
+//                 top: -1px;
+//                 background-color: transparent;
+//             }
+//         }
+//         .deployments .solution-title {
+//             @media (max-width: 375px) {
+//                 top: -1px;
+//             }
+//             @media (max-width: 318px) {
+//                 top: -10px;
+//             }
+//         }
+//     }
+// }
