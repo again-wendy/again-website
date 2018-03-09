@@ -4,6 +4,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 400px) {
+        display: none;
+    }
 }
 
 .banner-1 {

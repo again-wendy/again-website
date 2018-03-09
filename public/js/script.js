@@ -51,6 +51,7 @@ $(document).ready(function() {
     }
 });
 
+// Flip a solution to see front/back
 function flip($event) {
     $("." + $event).toggleClass("flipped");
     if($(window).width() < 769) {
@@ -120,12 +121,6 @@ function heightElements() {
     // Set height of map so its the same as the text
     var heightText = $("#footer .footer-text").height();
     $("#map").css("height", heightText + "px");
-
-    // If screen is bigger than 668px set top of read more btns in solution banners
-    if($(window).width() > 668) {
-        var btnCssTop1 = $(".solution-banner img").height() - $(".solution-banner button").height() - 35;
-        $(".solution-banner button").css("top", btnCssTop1 + "px");
-    }
 }
 
 // Select the right reason. When a reason is clicked, stop the interval
@@ -186,18 +181,22 @@ function toggleMobileMenu() {
     }
 }
 
+// Check if recaptcha is checked to remove disabled state of submit button
 function recaptchaCallback() {
     $("#contact-submit").removeAttr("disabled");
 }
 
+// Opens a modal
 function showModal(modalName) {
     $("#" + modalName + "-modal").fadeIn();
 }
 
+// Close a modal
 function closeModal(modalName) {
     $("#" + modalName + "-modal").fadeOut();
 }
 
+// Close modal with successmessage
 function closeSuccessModal() {
     $("#success-modal").fadeOut();
     setTimeout(function() {
@@ -241,6 +240,7 @@ $(document).keydown(function(e) {
     }
 });
 
+// Sent contactform
 function sendForm(event) {
     event.preventDefault();
     var data = {};
@@ -259,6 +259,7 @@ function sendForm(event) {
     }
 }
 
+// Set disabled with jQuery
 jQuery.fn.extend({
     disable: function(state) {
         return this.each(function() {
@@ -267,6 +268,7 @@ jQuery.fn.extend({
     }
 });
 
+// Check if class changes
 (function() {
     var originalAddClassMethod = jQuery.fn.addClass;
 
