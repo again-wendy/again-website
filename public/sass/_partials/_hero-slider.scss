@@ -45,7 +45,7 @@
             }
         }
         .slide-1 {
-            background-image: url('https://againtest.azurewebsites.net/public/images/profit-overlay.jpg');
+            background-image: url('../images/profit-overlay.jpg');
             .text {
                 @media (max-width: 575px) {
                     bottom: 50%;
@@ -80,7 +80,7 @@
             }
         }
         .slide-2 {
-            background-image: url('https://againtest.azurewebsites.net/public/images/planet-overlay.jpg');
+            background-image: url('../images/planet-overlay.jpg');
             .text {
                 bottom: 60%;
                 right: 5%;
@@ -112,7 +112,7 @@
             }
         }
         .slide-3 {
-            background-image: url('https://againtest.azurewebsites.net/public/images/people-overlay.jpg');
+            background-image: url('../images/people-overlay.jpg');
             .text {
                 bottom: 45%;
                 width: 65%;

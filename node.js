@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const Recaptcha = require('express-recaptcha').Recaptcha;
+const recaptcha = new Recaptcha(process.env.GOOGLE_SITE_KEY, process.env.GOOGLE_SECRET_KEY);
 
 const app = express();
 
@@ -23,7 +25,8 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.post('/send', (req, res) => {
+app.post('/send', recaptcha.middleware.verify, (req, res) => {
+
     let output = `
         <h1>Contact Form AGAIN.nl</h1>
         <h2>Details:</h2>
@@ -50,19 +53,23 @@ app.post('/send', (req, res) => {
     });
     
     let HelperOptions = {
-        from: '"Contact Form AGAIN website" <wendy.dimmendaal@again.nl>',
+        from: '"Contact Form AGAIN website" <curious@again.nl>',
         to: 'wendy.dimmendaal@again.nl',
-        subject: 'Hello World',
+        subject: 'Reactie contactformulier AGAIN',
         text: 'Test 123',
         html: output
     };
-    
-    transporter.sendMail(HelperOptions, (error, info) => {
-        if(error) {
-            res.render('error', {errorMsg: error, defaultLayout: 'simple'});
-        }
-        res.redirect('/?form=send');
-    });
+
+    if(!req.recaptcha.error) {
+        transporter.sendMail(HelperOptions, (err, info) => {
+            if(err) {
+                res.render('error', {errorMsg: err});
+            }
+            res.redirect('/?form=send');
+        });
+    } else {
+        res.render('error', {errorMsg: "Something went wrong with the captcha"});
+    }
 })
 
 var port = process.env.port || 3000;

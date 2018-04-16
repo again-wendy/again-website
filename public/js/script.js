@@ -83,10 +83,21 @@ function scrollToReason($event) {
 
 // Scroll to right solution
 function scrollToSolution($event) {
+    var ua = window.navigator.userAgent;
+    var idx = ua.indexOf("MSIE");
+    var isIE;
+    if(idx > 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
+        isIE = true;
+    } else {
+        isIE = false;
+    }
+
     $("html, body").animate({
         scrollTop: $("#solutions ." + $event).offset().top - 120
     }, 1000);
-    showSolution($event);
+    if (isIE == false) {
+        showSolution($event);
+    }
 }
 
 // When page is loaded set interval to change the reasons

@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'ZwoOT';
-  src: url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.eot");
-  src: url("https://againtest.azurewebsites.net/public//fonts/ZwoOT-Light.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Light.ttf") format("truetype");
+  src: url("../fonts/ZwoOT-Light.eot");
+  src: url("../fonts/ZwoOT-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ZwoOT-Light.woff") format("woff"), url("../fonts/ZwoOT-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'ZwoOT-Xbold';
-  src: url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.eot");
-  src: url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-Xbold.ttf") format("truetype");
+  src: url("../fonts/ZwoOT-Xbold.eot");
+  src: url("../fonts/ZwoOT-Xbold.eot?#iefix") format("embedded-opentype"), url("../fonts/ZwoOT-Xbold.woff") format("woff"), url("../fonts/ZwoOT-Xbold.ttf") format("truetype");
   font-weight: 800;
 }
 @font-face {
   font-family: 'ZwoOT-SemiBd';
-  src: url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.eot");
-  src: url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/ZwoOT-SemiBd.ttf") format("truetype");
+  src: url("../fonts/ZwoOT-SemiBd.eot");
+  src: url("../fonts/ZwoOT-SemiBd.eot?#iefix") format("embedded-opentype"), url("../fonts/ZwoOT-SemiBd.woff") format("woff"), url("../fonts/ZwoOT-SemiBd.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54.eot");
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54.woff2") format("woff2"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54.ttf") format("truetype");
+  src: url("../fonts/LifestyleM54.eot");
+  src: url("../fonts/LifestyleM54.eot?#iefix") format("embedded-opentype"), url("../fonts/LifestyleM54.woff2") format("woff2"), url("../fonts/LifestyleM54.woff") format("woff"), url("../fonts/LifestyleM54.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.eot");
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.woff2") format("woff2"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_1.ttf") format("truetype");
+  src: url("../fonts/LifestyleM54_1.eot");
+  src: url("../fonts/LifestyleM54_1.eot?#iefix") format("embedded-opentype"), url("../fonts/LifestyleM54_1.woff2") format("woff2"), url("../fonts/LifestyleM54_1.woff") format("woff"), url("../fonts/LifestyleM54_1.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lifestyle M54';
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.eot");
-  src: url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.eot?#iefix") format("embedded-opentype"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.woff2") format("woff2"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.woff") format("woff"), url("https://againtest.azurewebsites.net/public/fonts/LifestyleM54_2.ttf") format("truetype");
+  src: url("../fonts/LifestyleM54_2.eot");
+  src: url("../fonts/LifestyleM54_2.eot?#iefix") format("embedded-opentype"), url("../fonts/LifestyleM54_2.woff2") format("woff2"), url("../fonts/LifestyleM54_2.woff") format("woff"), url("../fonts/LifestyleM54_2.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -348,7 +348,7 @@ label {
 }
 /* line 47, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-1 {
-  background-image: url("https://againtest.azurewebsites.net/public/images/profit-overlay.jpg");
+  background-image: url("../images/profit-overlay.jpg");
 }
 @media (max-width: 575px) {
   /* line 49, ../sass/_partials/_hero-slider.scss */
@@ -400,7 +400,7 @@ label {
 }
 /* line 82, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-2 {
-  background-image: url("https://againtest.azurewebsites.net/public/images/planet-overlay.jpg");
+  background-image: url("../images/planet-overlay.jpg");
 }
 /* line 84, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-2 .text {
@@ -449,7 +449,7 @@ label {
 }
 /* line 114, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-3 {
-  background-image: url("https://againtest.azurewebsites.net/public/images/people-overlay.jpg");
+  background-image: url("../images/people-overlay.jpg");
 }
 /* line 116, ../sass/_partials/_hero-slider.scss */
 #hero-slider .slide-container .slide-3 .text {
@@ -1045,7 +1045,7 @@ section .section-title {
 }
 /* line 145, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .profit .image-block {
-  background-image: url("https://againtest.azurewebsites.net/public/images/profit.jpg");
+  background-image: url("../images/profit.jpg");
 }
 /* line 148, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .profit .icon-block img {
@@ -1059,11 +1059,11 @@ section .section-title {
 }
 /* line 154, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .planet .image-block {
-  background-image: url("https://againtest.azurewebsites.net/public/images/planet.jpg");
+  background-image: url("../images/planet.jpg");
 }
 /* line 157, ../sass/_partials/_sections.scss */
 #reasons .block-reasons .people .image-block {
-  background-image: url("https://againtest.azurewebsites.net/public/images/people.jpg");
+  background-image: url("../images/people.jpg");
 }
 
 /* line 164, ../sass/_partials/_sections.scss */
@@ -1141,7 +1141,7 @@ section .section-title {
 }
 /* line 226, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-1 .front {
-  background-image: url("https://againtest.azurewebsites.net/public/images/flexforcemonkey-banner.jpg");
+  background-image: url("../images/flexforcemonkey-banner.jpg");
 }
 @media (max-width: 380px) {
   /* line 226, ../sass/_partials/_sections.scss */
@@ -1156,11 +1156,11 @@ section .section-title {
 }
 /* line 236, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-2 .front {
-  background-image: url("https://againtest.azurewebsites.net/public/images/prototype-banner.jpg");
+  background-image: url("../images/prototype-banner.jpg");
 }
 /* line 239, ../sass/_partials/_sections.scss */
 #solutions .card-container .card-3 .front {
-  background-image: url("https://againtest.azurewebsites.net/public/images/deployments-banner.jpg");
+  background-image: url("../images/deployments-banner.jpg");
 }
 /* line 242, ../sass/_partials/_sections.scss */
 #solutions .card-container .card.flipped {
@@ -1271,32 +1271,55 @@ section .section-title {
     right: 15px;
   }
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 347, ../sass/_partials/_sections.scss */
+  #solutions .card-container {
+    perspective: none;
+  }
+  /* line 349, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card {
+    -ms-transform-style: none;
+  }
+  /* line 351, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card figure {
+    backface-visibility: visible;
+  }
+  /* line 354, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card .back {
+    transform: none;
+    background-color: #dbf0f5;
+  }
+  /* line 357, ../sass/_partials/_sections.scss */
+  #solutions .card-container .card .back .read-btn {
+    display: none;
+  }
+}
 
 @media (max-width: 580px) {
-  /* line 348, ../sass/_partials/_sections.scss */
+  /* line 367, ../sass/_partials/_sections.scss */
   #three-colums .row {
     flex-direction: column;
   }
 }
-/* line 352, ../sass/_partials/_sections.scss */
+/* line 371, ../sass/_partials/_sections.scss */
 #three-colums .row .column {
   background-color: #ececec;
   margin-right: 15px;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 357, ../sass/_partials/_sections.scss */
+/* line 376, ../sass/_partials/_sections.scss */
 #three-colums .row .column:last-child {
   margin-right: 0;
 }
 @media (max-width: 580px) {
-  /* line 352, ../sass/_partials/_sections.scss */
+  /* line 371, ../sass/_partials/_sections.scss */
   #three-colums .row .column {
     margin-bottom: 20px;
     margin-right: 0;
   }
 }
-/* line 364, ../sass/_partials/_sections.scss */
+/* line 383, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-title {
   margin: 0;
   padding: 10px;
@@ -1305,22 +1328,22 @@ section .section-title {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 678px) {
-  /* line 364, ../sass/_partials/_sections.scss */
+  /* line 383, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-title {
     font-size: 1.6rem;
   }
 }
-/* line 374, ../sass/_partials/_sections.scss */
+/* line 393, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text {
   padding: 0 15px 15px 15px;
 }
 @media (max-width: 678px) {
-  /* line 374, ../sass/_partials/_sections.scss */
+  /* line 393, ../sass/_partials/_sections.scss */
   #three-colums .row .column .column-text {
     padding: 0 10px 10px 10px;
   }
 }
-/* line 379, ../sass/_partials/_sections.scss */
+/* line 398, ../sass/_partials/_sections.scss */
 #three-colums .row .column .column-text .indicates-required {
   font-size: 0.8rem;
   margin-bottom: 10px;
@@ -1343,7 +1366,7 @@ section .section-title {
 
 /* line 12, ../sass/_partials/_banner.scss */
 .banner-1 {
-  background-image: url("https://againtest.azurewebsites.net/public/images/connect.jpg");
+  background-image: url("../images/connect.jpg");
 }
 
 /* line 16, ../sass/_partials/_banner.scss */

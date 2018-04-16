@@ -143,7 +143,7 @@ section {
             }
         }
         .profit .image-block {
-            background-image: url('https://againtest.azurewebsites.net/public/images/profit.jpg');
+            background-image: url('../images/profit.jpg');
         }
         .profit .icon-block img {
             margin-left: 2%;
@@ -152,10 +152,10 @@ section {
             }
         }
         .planet .image-block {
-            background-image: url('https://againtest.azurewebsites.net/public/images/planet.jpg');
+            background-image: url('../images/planet.jpg');
         }
         .people .image-block {
-            background-image: url('https://againtest.azurewebsites.net/public/images/people.jpg');
+            background-image: url('../images/people.jpg');
         }
     }
 }
@@ -224,7 +224,7 @@ section {
             }
         }
         .card-1 .front {
-            background-image: url('https://againtest.azurewebsites.net/public/images/flexforcemonkey-banner.jpg');
+            background-image: url('../images/flexforcemonkey-banner.jpg');
             @media (max-width: 380px) {
                 background-position: 10% 50%;
             }
@@ -234,10 +234,10 @@ section {
             }
         }
         .card-2 .front {
-            background-image: url('https://againtest.azurewebsites.net/public/images/prototype-banner.jpg');
+            background-image: url('../images/prototype-banner.jpg');
         }
         .card-3 .front {
-            background-image: url('https://againtest.azurewebsites.net/public/images/deployments-banner.jpg');
+            background-image: url('../images/deployments-banner.jpg');
         }
         .card.flipped {
             transform: rotateY(180deg);
@@ -337,6 +337,25 @@ section {
                     .link-btn {
                         top: 210px;
                         right: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        // IE10* fix for flipcard
+        .card-container {
+            perspective: none;
+            .card {
+                -ms-transform-style: none;
+                figure {
+                    backface-visibility: visible;
+                }
+                .back {
+                    transform: none;
+                    background-color: $light-blue;
+                    .read-btn {
+                        display: none;
                     }
                 }
             }
