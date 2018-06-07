@@ -842,6 +842,48 @@ label {
   }
 }
 
+/* line 2, ../sass/_partials/_form.scss */
+form .form-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 5, ../sass/_partials/_form.scss */
+form .form-group label {
+  width: 30%;
+  float: left;
+  padding-top: 6px;
+}
+@media (max-width: 475px) {
+  /* line 5, ../sass/_partials/_form.scss */
+  form .form-group label {
+    width: 100%;
+    float: none;
+  }
+}
+/* line 14, ../sass/_partials/_form.scss */
+form .form-group input, form .form-group textarea {
+  width: 70%;
+  margin: 0;
+}
+@media (max-width: 475px) {
+  /* line 14, ../sass/_partials/_form.scss */
+  form .form-group input, form .form-group textarea {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 475px) {
+  /* line 22, ../sass/_partials/_form.scss */
+  form .form-group input {
+    padding: 10px 6px;
+  }
+}
+
+/* line 30, ../sass/_partials/_form.scss */
+.anti-spam {
+  display: none;
+}
+
 /* line 1, ../sass/_partials/_sections.scss */
 section {
   margin: 96px 0;

@@ -111,56 +111,6 @@
 
 {{{body}}}
 
-<div id="contact-modal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3 class="modal-title">Get in contact</h3>
-            <button class="close" onclick="closeModal('contact')">&times;</button>
-        </div>
-        <form id="contact-form" method="POST" action="send">
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-                <div class="form-group">
-                    <label for="msg">Message</label>
-                    <textarea name="msg" id="msg"></textarea>
-                </div>
-                <div class="g-recaptcha" data-sitekey="6LfIOEkUAAAAANvbdpYps7L8LslfjMZr1SD4LJz3" data-callback="recaptchaCallback"></div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-dark-grey" onclick="closeModal('contact')">Cancel <span class="fa fa-times"></span></button>
-                <button id="contact-submit" type="submit" disabled="disabled" class="btn-green">Send <span class="fa fa-paper-plane"></span></button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div id="success-modal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3 class="modal-title">Success!</h3>
-            <button class="close" onclick="closeSuccessModal()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <span class="fa fa-check-circle"></span>
-            <p>Your form has been sent successfully. We will contact you as soon as possible!</p>
-        </div>
-        <div class="modal-footer">
-            <button class="btn-dark-grey" onclick="closeSuccessModal()">Close <span class="fa fa-times"></span></button>
-        </div>
-    </div>
-</div>
-
 <footer id="footer">
     <div class="container">
         <div class="footer-text" itemscope itemtype="http://schema.org/LocalBusiness">
@@ -174,10 +124,6 @@
             <p>
                 <span class="fa fa-phone"></span> <a class="green-link" href="tel:+31263792417"><span itemprop="telephone">+31 26 - 379 24 17</span></a><br />
                 <span class="fa fa-envelope"></span> <a class="green-link" href="mailto:curious@again.nl"><span itemprop="email">curious@again.nl</span></a>
-            </p>
-            <p>
-                Or fill in our contact form:<br />
-                <a class="btn-green" onclick="showModal('contact')">Contact form</a>
             </p>
         </div>
         <div id="map" class="footer-maps"></div>

@@ -3,12 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
+const flash = require('express-flash');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const Recaptcha = require('express-recaptcha').Recaptcha;
-const recaptcha = new Recaptcha(process.env.GOOGLE_SITE_KEY, process.env.GOOGLE_SECRET_KEY);
 
 const app = express();
+const sessionStore = new session.MemoryStore;
 
 // View engine setup
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -21,11 +22,26 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Session Middleware
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    key: process.env.COOKIE_KEY,
+    store: sessionStore,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 6000
+    }
+}));
+
+// Flash Middleware
+app.use(flash());
+
 app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.post('/send', recaptcha.middleware.verify, (req, res) => {
+app.post('/send', (req, res) => {
 
     let output = `
         <h1>Contact Form AGAIN.nl</h1>
@@ -52,7 +68,7 @@ app.post('/send', recaptcha.middleware.verify, (req, res) => {
         }
     });
     
-    let HelperOptions = {
+    let helperOptions = {
         from: '"Contact Form AGAIN website" <curious@again.nl>',
         to: 'wendy.dimmendaal@again.nl',
         subject: 'Reactie contactformulier AGAIN',
@@ -60,15 +76,17 @@ app.post('/send', recaptcha.middleware.verify, (req, res) => {
         html: output
     };
 
-    if(!req.recaptcha.error) {
-        transporter.sendMail(HelperOptions, (err, info) => {
-            if(err) {
-                res.render('error', {errorMsg: err});
+    // If hidden field is filled, its a spam mail and we don't send it
+    if(req.body.url === "" && req.body.url.length == 0) {
+        transporter.sendMail(helperOptions, (error, info) => {
+            if(error) {
+                req.flash('success', 'Sorry, something went wrong. Please try again later!');
+                res.redirect(req.get('referer') + "#contact");
+            } else {
+                req.flash('success', 'Thanks for your message! You\'ll hear from us soon.');
+                res.redirect(req.get('referer') + "#contact");
             }
-            res.redirect('/?form=send');
         });
-    } else {
-        res.render('error', {errorMsg: "Something went wrong with the captcha"});
     }
 })
 
