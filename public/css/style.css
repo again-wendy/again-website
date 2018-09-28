@@ -67,93 +67,103 @@ strong {
 }
 
 /* line 23, ../sass/_partials/_base-styles.scss */
+.primary {
+  color: #c9d304;
+}
+
+/* line 27, ../sass/_partials/_base-styles.scss */
+.bold {
+  font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
+}
+
+/* line 31, ../sass/_partials/_base-styles.scss */
 .container {
   width: 60%;
   margin: 0 auto;
 }
 @media (max-width: 1100px) {
-  /* line 23, ../sass/_partials/_base-styles.scss */
+  /* line 31, ../sass/_partials/_base-styles.scss */
   .container {
     width: 65%;
   }
 }
 @media (max-width: 900px) {
-  /* line 23, ../sass/_partials/_base-styles.scss */
+  /* line 31, ../sass/_partials/_base-styles.scss */
   .container {
     width: 70%;
   }
 }
 @media (max-width: 768px) {
-  /* line 23, ../sass/_partials/_base-styles.scss */
+  /* line 31, ../sass/_partials/_base-styles.scss */
   .container {
     width: 85%;
   }
 }
 
-/* line 37, ../sass/_partials/_base-styles.scss */
+/* line 45, ../sass/_partials/_base-styles.scss */
 h1 {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
   font-size: 3rem;
 }
 
-/* line 41, ../sass/_partials/_base-styles.scss */
+/* line 49, ../sass/_partials/_base-styles.scss */
 h2 {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
 }
 
-/* line 45, ../sass/_partials/_base-styles.scss */
+/* line 53, ../sass/_partials/_base-styles.scss */
 h3 {
   font-family: "ZwoOT-Xbold", Helvetica, Arial, sans-serif;
   font-size: 2rem;
 }
 
-/* line 49, ../sass/_partials/_base-styles.scss */
+/* line 57, ../sass/_partials/_base-styles.scss */
 h4 {
   font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
   font-size: 2rem;
 }
 
-/* line 53, ../sass/_partials/_base-styles.scss */
+/* line 61, ../sass/_partials/_base-styles.scss */
 h5 {
   font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
 }
 
-/* line 57, ../sass/_partials/_base-styles.scss */
+/* line 65, ../sass/_partials/_base-styles.scss */
 h6 {
   font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
 }
 
-/* line 62, ../sass/_partials/_base-styles.scss */
+/* line 70, ../sass/_partials/_base-styles.scss */
 a,
 a:visited {
   color: #2b2b2b;
   font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
 }
 
-/* line 68, ../sass/_partials/_base-styles.scss */
+/* line 76, ../sass/_partials/_base-styles.scss */
 a:hover,
 a:focus,
 a:active {
   color: #555555;
 }
 
-/* line 74, ../sass/_partials/_base-styles.scss */
+/* line 82, ../sass/_partials/_base-styles.scss */
 a.green-link,
 a.green-link:visited {
   color: #c9d304;
 }
 
-/* line 79, ../sass/_partials/_base-styles.scss */
+/* line 87, ../sass/_partials/_base-styles.scss */
 a.green-link:focus,
 a.green-link:hover,
 a.green-link:active {
   color: #b4bd03;
 }
 
-/* line 85, ../sass/_partials/_base-styles.scss */
+/* line 93, ../sass/_partials/_base-styles.scss */
 input, textarea {
   padding: 6px;
   border: 1px solid #dfdfdf;
@@ -161,12 +171,12 @@ input, textarea {
   margin: 6px 0 8px 0;
 }
 
-/* line 92, ../sass/_partials/_base-styles.scss */
+/* line 100, ../sass/_partials/_base-styles.scss */
 label {
   font-family: "ZwoOT-SemiBd", Helvetica, Arial, sans-serif;
 }
 
-/* line 96, ../sass/_partials/_base-styles.scss */
+/* line 104, ../sass/_partials/_base-styles.scss */
 .btn-white-transparent, .btn-white-transparent-xl, .btn-green, .btn-green-xl, .btn-dark-grey-xl, .btn-dark-grey {
   display: inline-block;
   padding: 6px 12px;
@@ -187,80 +197,80 @@ label {
   text-decoration: none;
 }
 
-/* line 116, ../sass/_partials/_base-styles.scss */
+/* line 124, ../sass/_partials/_base-styles.scss */
 .btn-white-transparent, .btn-white-transparent-xl {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
   color: #2b2b2b;
 }
-/* line 121, ../sass/_partials/_base-styles.scss */
+/* line 129, ../sass/_partials/_base-styles.scss */
 .btn-white-transparent:hover, .btn-white-transparent-xl:hover, .btn-white-transparent:focus, .btn-white-transparent-xl:focus, .btn-white-transparent:active, .btn-white-transparent-xl:active {
   background-color: rgba(255, 255, 255, 0.9);
 }
-/* line 126, ../sass/_partials/_base-styles.scss */
+/* line 134, ../sass/_partials/_base-styles.scss */
 .btn-white-transparent:disabled, .btn-white-transparent-xl:disabled, .btn-white-transparent[disabled], [disabled].btn-white-transparent-xl {
   cursor: not-allowed;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 133, ../sass/_partials/_base-styles.scss */
+/* line 141, ../sass/_partials/_base-styles.scss */
 .btn-white-transparent-xl {
   padding: 15px 20px;
   font-size: 1.4rem;
 }
 
-/* line 139, ../sass/_partials/_base-styles.scss */
+/* line 147, ../sass/_partials/_base-styles.scss */
 .btn-green, .btn-green-xl, .btn-dark-grey-xl {
   background-color: #c9d304;
   border: 1px solid #c9d304;
   color: #2b2b2b;
 }
-/* line 144, ../sass/_partials/_base-styles.scss */
+/* line 152, ../sass/_partials/_base-styles.scss */
 .btn-green:hover, .btn-green-xl:hover, .btn-dark-grey-xl:hover, .btn-green:focus, .btn-green-xl:focus, .btn-dark-grey-xl:focus, .btn-green:active, .btn-green-xl:active, .btn-dark-grey-xl:active {
   background-color: #b4bd03;
 }
-/* line 149, ../sass/_partials/_base-styles.scss */
+/* line 157, ../sass/_partials/_base-styles.scss */
 .btn-green:disabled, .btn-green-xl:disabled, .btn-dark-grey-xl:disabled, .btn-green[disabled], [disabled].btn-green-xl, [disabled].btn-dark-grey-xl {
   cursor: not-allowed;
   background-color: rgba(201, 211, 4, 0.6);
 }
 
-/* line 156, ../sass/_partials/_base-styles.scss */
+/* line 164, ../sass/_partials/_base-styles.scss */
 .btn-green-xl {
   padding: 15px 20px;
   font-size: 1.4rem;
 }
 
-/* line 162, ../sass/_partials/_base-styles.scss */
+/* line 170, ../sass/_partials/_base-styles.scss */
 .btn-dark-grey {
   background-color: #2b2b2b;
   border: 1px solid #2b2b2b;
   color: white;
 }
-/* line 167, ../sass/_partials/_base-styles.scss */
+/* line 175, ../sass/_partials/_base-styles.scss */
 .btn-dark-grey:hover, .btn-dark-grey:focus, .btn-dark-grey:active {
   background-color: #555555;
 }
-/* line 172, ../sass/_partials/_base-styles.scss */
+/* line 180, ../sass/_partials/_base-styles.scss */
 .btn-dark-grey:disabled, .btn-dark-grey[disabled] {
   cursor: not-allowed;
   background-color: rgba(43, 43, 43, 0.6);
 }
 
-/* line 179, ../sass/_partials/_base-styles.scss */
+/* line 187, ../sass/_partials/_base-styles.scss */
 .btn-dark-grey-xl {
   padding: 15px 20px;
   font-size: 1.4rem;
 }
 
-/* line 185, ../sass/_partials/_base-styles.scss */
+/* line 193, ../sass/_partials/_base-styles.scss */
 .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   width: 100%;
 }
-/* line 190, ../sass/_partials/_base-styles.scss */
+/* line 198, ../sass/_partials/_base-styles.scss */
 .row .column {
   flex-basis: 0;
   flex-grow: 1;
@@ -268,12 +278,12 @@ label {
   padding: 15px;
 }
 
-/* line 198, ../sass/_partials/_base-styles.scss */
+/* line 206, ../sass/_partials/_base-styles.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 202, ../sass/_partials/_base-styles.scss */
+/* line 210, ../sass/_partials/_base-styles.scss */
 .entire-width {
   width: 100%;
 }
